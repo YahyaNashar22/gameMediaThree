@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <style>body{margin:0}</style>
+    <title>Motion Tracker</title>
+</head>
+<body>
+    <div id="liveView" class="videoView" style="position: absolute;">
+        <button id="webcamButton" class="mdc-button mdc-button--raised">
+          <span class="mdc-button__ripple"></span>
+          <span class="mdc-button__label">ENABLE WEBCAM</span>
+        </button>
+        <div>
+          <video id="webcam" style="position: absolute;" autoplay playsinline></video>
+          <canvas class="output_canvas" id="output_canvas"></canvas>
+        </div>
+      </div>
+    <script type="module" src="motionTracker.js"></script>
+</body>
+</html>
